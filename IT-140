@@ -1,0 +1,24 @@
+user_text = input()
+
+#excluded characters from output
+excluded_characters = (' ', '.', ',')
+
+#number of characters in user text
+count_characters = len(user_text)
+
+#index for while loop
+i = 0 
+
+#repeat through excluded character
+while i < len(excluded_characters):
+    characters = excluded_characters[i]
+    
+    #subtract the count of excluded characters from count characters
+    count_characters -= user_text.count(characters)
+    
+    #increment i for next iteration
+    i += 1
+
+#print count
+print(count_characters)
+
